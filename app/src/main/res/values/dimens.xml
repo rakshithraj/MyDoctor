@@ -1,0 +1,15 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="header_pad">10dp</dimen>
+    <dimen name="small_padding">10dp</dimen>
+    <dimen name="app_bar_height">256dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="edit_box_leng">300dp</dimen>
+    <dimen name="search_button">40dp</dimen>
+    <dimen name="doctor_list_image">50dp</dimen>
+    <dimen name="doctor_image">100dp</dimen>
+    <dimen name="doctor_name_padding_top">50dp</dimen>
+</resources>

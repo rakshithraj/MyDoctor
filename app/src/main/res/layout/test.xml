@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RelativeLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toLeftOf="@+id/serchButton"
+                    android:layout_toStartOf="@+id/serchButton"
+                    android:background="@color/dark_white" />
+
+                <ImageView
+                    android:id="@+id/serchButton"
+                    android:layout_width="@dimen/search_button"
+                    android:layout_height="@dimen/search_button"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/sky_blue"
+                    android:src="@android:drawable/ic_menu_search" />
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/office_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/doctor_pic_bg" />
+
+            <ImageView
+                android:id="@+id/imgDoctorPic"
+                android:layout_width="@dimen/doctor_image"
+                android:layout_height="@dimen/doctor_image"
+                android:layout_below="@+id/office_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-50dp"
+                android:background="@mipmap/doctor_pic"
+                android:clickable="true"
+                android:src="@mipmap/doctor_pic" />
+
+
+            <LinearLayout
+                android:id="@+id/lyDoctorDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgDoctorPic"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="DR.Vignesh"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="MBBS (Skin specialist)"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/dark_white"
+                            android:padding="5dp">
+
+
+                            <ImageView
+                                android:id="@+id/imgDoor_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:src="@mipmap/door_icon" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/imgDoor_icon"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="ROOM NO"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@mipmap/number_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingTop="10dp"
+                                    android:text="03"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/dark_white"
+                            android:padding="5dp">
+
+
+                            <ImageView
+                                android:id="@+id/location_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:src="@mipmap/location_icon" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/location_icon"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Father muler' Hospital"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Nethravathi building, hampankatta, mangalore"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:background="@color/dark_white"
+                            android:padding="5dp">
+
+
+                            <ImageView
+                                android:id="@+id/time_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+
+                                android:src="@mipmap/time_icon" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:layout_toRightOf="@+id/time_icon"
+                                android:orientation="vertical"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="mon-tue"
+                                    android:textStyle="bold"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:text="3555"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:textStyle="bold"
+                                    android:text="mon-tue"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:text="3555"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="@dimen/edit_box_leng"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lyDoctorDetail"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:background="@drawable/rounded_corner_blue"
+                android:textAllCaps="false"
+                android:text="Book a Appoinment"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

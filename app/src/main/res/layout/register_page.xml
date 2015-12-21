@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_header"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="20dp"
+
+            >
+
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+
+
+        >
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.5"
+            android:checked="false"
+            android:text="@string/doctor"
+
+
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.5"
+            android:checked="false"
+
+
+            android:text="@string/patient"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </RadioGroup>
+
+
+
+            <EditText
+                android:id="@+id/etFirstName"
+                android:layout_width="@dimen/edit_box_leng"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/radioGroup"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_corner_white"
+
+                android:singleLine="true"
+
+                android:hint="@string/first_name"
+                android:padding="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/etLastName"
+                android:layout_width="@dimen/edit_box_leng"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etFirstName"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+
+                android:background="@drawable/rounded_corner_white"
+                android:hint="@string/last_name"
+                android:padding="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/etEmailId"
+                android:layout_width="@dimen/edit_box_leng"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etLastName"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:singleLine="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+
+                android:background="@drawable/rounded_corner_white"
+                android:hint="@string/email_id"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="@dimen/edit_box_leng"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etEmailId"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+
+                android:background="@drawable/rounded_corner_white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/specialist"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="5dp"
+                    android:src="@android:drawable/arrow_down_float" />
+
+            </RelativeLayout>
+            <Button
+                android:id="@+id/register"
+                android:layout_width="@dimen/edit_box_leng"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/relativeLayout"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_corner_blue"
+                android:paddingBottom="10dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="10dp"
+                android:text="@string/register"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
